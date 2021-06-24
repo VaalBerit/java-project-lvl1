@@ -7,6 +7,13 @@
  
  plugins {
   id 'com.github.ben-manes.versions' version '0.38.0'
+  id 'application'
 }
+
+application {
+  mainClass = 'hexlet.code.App'
+  applicationDefaultJvmArgs = ['-Dgreeting.language=en']
+}
+
 group = 'hexlet.code'
 version = '1.0-SNAPSHOT'
