@@ -15,5 +15,8 @@ application {
   applicationDefaultJvmArgs = ['-Dgreeting.language=en']
 }
 
+repositories {
+    mavenCentral()
+}
 group = 'hexlet.code'
 version = '1.0-SNAPSHOT'
