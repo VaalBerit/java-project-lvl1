@@ -9,21 +9,18 @@ public class Cli {
         Scanner scanner = new Scanner(System.in);
         System.out.print("May I have your name? ");
 
-        String name = scanner.nextLine();
+        String nameTemp = scanner.nextLine();
 
-        while (name.isEmpty()) {
+        while (nameTemp.isEmpty()) {
             System.out.println("You didn't enter a name or specified something bad! \n Try again: ");
-            name = scanner.nextLine();
+            nameTemp = scanner.nextLine();
         }
-        return name;
+        return nameTemp;
     }
     public static String getName() {
         return name;
     }
-    public void setName(final String name) {
-        this.name = name;
-    }
-    public static void greetingName(final String name) {
-        System.out.println("Hello, " + name + "!");
+    public static void greetingName(final String pName) {
+        System.out.println("Hello, " + pName + "!");
     }
 }
