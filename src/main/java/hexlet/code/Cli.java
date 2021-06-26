@@ -13,7 +13,8 @@ public class Cli {
     public static void getGreeting() {
         System.out.print(greeting); }
 
-    public static void helloName(final String pName) { System.out.println("Hello, " + pName + "!"); }
+    public static void helloName(final String pName) {
+        System.out.println("Hello, " + pName + "!"); }
 
     protected static String requestName() {
         Scanner scanner = new Scanner(System.in);
