@@ -1,4 +1,4 @@
-package hexlet.code;
+package hexlet.code.view;
 
 import java.util.ArrayList;
 
