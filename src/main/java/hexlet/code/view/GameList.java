@@ -2,6 +2,7 @@ package hexlet.code.view;
 
 import hexlet.code.games.Cli;
 import hexlet.code.games.Exit;
+import hexlet.code.games.Even;
 
 import java.util.ArrayList;
 
@@ -11,6 +12,7 @@ public class GameList {
     public static void initialiazationGameList() {
         brainGamesName.add(Exit.getGameName());
         brainGamesName.add(Cli.getGameName());
+        brainGamesName.add(Even.getGameName());
     }
 
     public static ArrayList<String> getBrainGamesName() {
