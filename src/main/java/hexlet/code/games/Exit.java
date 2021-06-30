@@ -1,10 +1,13 @@
 package hexlet.code;
+/**
+ * This class for exit game.
+ */
 
-public class Exit {
-    private static final String gameName = "Exit";
+public final class Exit {
+    private static final String GAMEEXIT = "Exit";
 
     public static String getGameName() {
-        return gameName; }
+        return GAMEEXIT; }
 
     public int exitGame() {
         System.out.println("Good luck!");

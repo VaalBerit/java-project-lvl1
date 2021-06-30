@@ -3,8 +3,8 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Cli {
-    private static final String gameName = "Greet";
-    private static final String greeting = "Welcome to the Brain Games!" + "\n" + "May I have your name? ";
+    private static final String GAMEGREET = "Greet";
+    private static final String GREETINGPLAYER = "Welcome to the Brain Games!" + "\n" + "May I have your name? ";
     private static String playerName;
 
     public static String getName() {
@@ -12,11 +12,11 @@ public class Cli {
     }
 
     public static String getGameName() {
-        return gameName;
+        return GAMEGREET;
     }
 
     public static void getGreeting() {
-        System.out.print(greeting); }
+        System.out.print(GREETINGPLAYER); }
 
     public static void helloName(final String pName) {
         System.out.println("Hello, " + pName + "!"); }
