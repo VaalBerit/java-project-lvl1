@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.gamecontroller.GameSelection;
 import hexlet.code.gamecontroller.RequestNumber;
+import hexlet.code.gamecontroller.RequestAnswer;
 import hexlet.code.view.GameList;
 import hexlet.code.view.ViewSelections;
 
@@ -12,6 +13,7 @@ public class App {
 
     ViewSelections vs = new ViewSelections();
     vs.printGames(gameList.getBrainGamesName());
+
     GameSelection.gamesSelector(RequestNumber.requestInput());
 
   }
