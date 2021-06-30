@@ -6,10 +6,12 @@ import hexlet.code.gamecontroller.RequestAnswer;
 public class Even extends Cli {
     private static final String GAMEEVEN = "Even";
     private static final String RULES = "Answer \"yes\" if number even otherwise answer \"no\".";
+    private static final int RANDOM_UPPER_LIMIT = 1000;
+    private static final int MAX_PART = 3;
     private static int part = 0;
 
-    private static Random random = new Random();
-    private static int number = random.nextInt(1000);
+    private static final Random RANDOM = new Random();
+    private static int number = RANDOM.nextInt(RANDOM_UPPER_LIMIT);
 
     public static void runGameEven() {
         Cli.helloName(Cli.requestName());
@@ -21,9 +23,11 @@ public class Even extends Cli {
         return GAMEEVEN;
     }
 
-    public static void getRules() { System.out.println(RULES + "\n"); }
+    public static void getRules() {
+        System.out.println(RULES + "\n"); }
 
-    private static void printQuestion() { System.out.println("Question: " + number); }
+    private static void printQuestion() {
+        System.out.println("Question: " + number); }
 
     private static void printTrue() {
         System.out.println("Correct!" + "\n");
@@ -40,7 +44,7 @@ public class Even extends Cli {
 
     private static void resetParamTrue(RequestAnswer requestAnswer) {
         part++;
-        number = random.nextInt(1000);
+        number = RANDOM.nextInt(RANDOM_UPPER_LIMIT);
         requestAnswer.resetAnswer();
     }
 
@@ -53,33 +57,29 @@ public class Even extends Cli {
     private static void printAnswer() {
         String answer;
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < MAX_PART; i++) {
             RequestAnswer requestAnswer = new RequestAnswer();
             printQuestion();
             System.out.print("Your answer: ");
-            answer = requestAnswer.requestInput();
-
-            if (checkAnswer(answer,number) == true) {
+            answer = RequestAnswer.requestInput();
+            if (checkAnswer(answer, number)) {
                 printTrue();
                 resetParamTrue(requestAnswer);
-            }
-            else {
+            } else {
                 printFalse();
                 i = resetParamFalse(requestAnswer);
             }
         }
-        if (part == 3) {
+        if (part == MAX_PART) {
             printCongratulations();
         }
     }
 
-    private static boolean checkAnswer(String answer, int number) {
-        if (answer.equals("yes") && number % 2 == 0) {
+    private static boolean checkAnswer(String answer, int pNumber) {
+        if (answer.equals("yes") && pNumber % 2 == 0) {
             return true;
+        } else {
+            return answer.equals("no") && pNumber % 2 != 0;
         }
-        else if (answer.equals("no") && number % 2 != 0) {
-            return true;
-        }
-        else return false;
     }
 }

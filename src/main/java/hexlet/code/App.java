@@ -2,7 +2,6 @@ package hexlet.code;
 
 import hexlet.code.gamecontroller.GameSelection;
 import hexlet.code.gamecontroller.RequestNumber;
-import hexlet.code.gamecontroller.RequestAnswer;
 import hexlet.code.view.GameList;
 import hexlet.code.view.ViewSelections;
 
