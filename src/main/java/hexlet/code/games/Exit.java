@@ -1,4 +1,4 @@
-package hexlet.code;
+package hexlet.code.games;
 /**
  * This class for exit game.
  */
@@ -9,7 +9,7 @@ public final class Exit {
     public static String getGameName() {
         return GAMEEXIT; }
 
-    public int exitGame() {
+    public static void exitGame() {
         System.out.println("Good luck!");
-        return 0; }
+    }
 }
