@@ -19,7 +19,7 @@ public class Cli {
         System.out.print(GREETINGPLAYER); }
 
     public static void helloName(final String pName) {
-        System.out.println("Hello, " + pName + "!"); }
+        System.out.println("Hello, " + pName + "!" + "\n"); }
 
     public static String requestName() {
         Scanner scanner = new Scanner(System.in);
@@ -29,6 +29,9 @@ public class Cli {
         while (name.isEmpty()) {
             System.out.println("You didn't enter a name or specified something bad!" + "\n" + "Try again: ");
             name = scanner.nextLine();
+        }
+        if (name != null) {
+            playerName = name;
         }
         return name;
     }
