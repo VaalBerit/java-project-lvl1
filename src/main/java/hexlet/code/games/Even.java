@@ -14,7 +14,7 @@ public class Even extends Cli {
     private static int number = RANDOM.nextInt(RANDOM_UPPER_LIMIT);
 
     public static void runGameEven() {
-        Cli.helloName(Cli.requestName());
+        Cli.runGameGreet();
         getRules();
         printAnswer();
     }
@@ -33,9 +33,14 @@ public class Even extends Cli {
         System.out.println("Correct!" + "\n");
     }
 
-    private static void printFalse() {
-        System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'." + "\n"
-                + "Let's try again, " + Cli.getName() + "!" + "\n");
+    private static void printFalse(String answer) {
+        if (answer.equals("yes")) {
+            System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'." + "\n"
+                    + "Let's try again, " + Cli.getName() + "!");
+        } else {
+            System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'." + "\n"
+                    + "Let's try again, " + Cli.getName() + "!");
+        }
     }
 
     private static void printCongratulations() {
@@ -48,17 +53,16 @@ public class Even extends Cli {
         requestAnswer.resetAnswer();
     }
 
-    private static int resetParamFalse(RequestAnswer requestAnswer) {
+    private static void resetParamFalse(RequestAnswer requestAnswer) {
         part = 0;
         requestAnswer.resetAnswer();
-        return -1;
     }
 
     private static void printAnswer() {
         String answer;
+        RequestAnswer requestAnswer = new RequestAnswer();
 
         for (int i = 0; i < MAX_PART; i++) {
-            RequestAnswer requestAnswer = new RequestAnswer();
             printQuestion();
             System.out.print("Your answer: ");
             answer = RequestAnswer.requestInput();
@@ -66,8 +70,10 @@ public class Even extends Cli {
                 printTrue();
                 resetParamTrue(requestAnswer);
             } else {
-                printFalse();
-                i = resetParamFalse(requestAnswer);
+                printFalse(answer);
+                i = -1;
+                resetParamFalse(requestAnswer);
+                break;
             }
         }
         if (part == MAX_PART) {

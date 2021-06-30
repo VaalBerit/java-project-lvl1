@@ -11,6 +11,7 @@ public class RequestAnswer {
             if (scanner.hasNextLine() && (scanner.hasNext("yes") || scanner.hasNext("no"))) {
                 answer = scanner.nextLine();
             } else {
+                //break;
                 System.out.println("You answered incorrectly, only \"yes\" or \"no\" are accepted!" + "\n"
                         + "Try again: ");
                 scanner.nextLine();
