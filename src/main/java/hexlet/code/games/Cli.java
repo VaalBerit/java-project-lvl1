@@ -1,4 +1,4 @@
-package hexlet.code;
+package hexlet.code.games;
 
 import java.util.Scanner;
 
@@ -21,7 +21,7 @@ public class Cli {
     public static void helloName(final String pName) {
         System.out.println("Hello, " + pName + "!"); }
 
-    protected static String requestName() {
+    public static String requestName() {
         Scanner scanner = new Scanner(System.in);
         getGreeting();
         String name = scanner.nextLine();
