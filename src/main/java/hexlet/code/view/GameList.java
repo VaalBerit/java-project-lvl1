@@ -1,4 +1,7 @@
-package hexlet.code;
+package hexlet.code.view;
+
+import hexlet.code.games.Cli;
+import hexlet.code.games.Exit;
 
 import java.util.ArrayList;
 
