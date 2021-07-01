@@ -1,4 +1,4 @@
-### Hexlet tests and linter status:
+### Brain Games tests and linter status:
 [![Actions Status](https://github.com/VaalBerit/java-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/VaalBerit/java-project-lvl1/actions)
 <a href="https://codeclimate.com/github/VaalBerit/java-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/e8f4bdb533e4e4f2c327/maintainability" /></a>
 [![Build Gradle](https://github.com/VaalBerit/java-project-lvl1/actions/workflows/main.yml/badge.svg)](https://github.com/VaalBerit/java-project-lvl1/actions/workflows/main.yml)
