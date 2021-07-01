@@ -5,7 +5,7 @@ import hexlet.code.games.Exit;
 import hexlet.code.games.Even;
 import hexlet.code.view.GameList;
 
-public class GameSelection extends  RequestNumber {
+public class Engine extends  RequestNumber {
     public static void gamesSelector(int answer) {
         if (answer >= 0 && answer < GameList.getBrainGamesName().size()) {
             switch (answer) {
