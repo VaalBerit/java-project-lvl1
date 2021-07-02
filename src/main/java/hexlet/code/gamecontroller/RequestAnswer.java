@@ -19,7 +19,7 @@ public class RequestAnswer {
         }
         return answer;
     }
-    public final void resetAnswer() {
+    public static final void resetAnswer() {
         answer = "";
     }
 }
