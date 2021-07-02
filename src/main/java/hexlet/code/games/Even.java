@@ -1,36 +1,51 @@
 package hexlet.code.games;
 
 import java.util.Random;
+import hexlet.code.App;
 import hexlet.code.gamecontroller.RequestAnswer;
 
 public class Even extends Cli {
     private static final String GAMEEVEN = "Even";
     private static final String RULES = "Answer \"yes\" if number even otherwise answer \"no\".";
-    private static final int RANDOM_UPPER_LIMIT = 1000;
-    private static final int MAX_PART = 3;
+    private static final int RANDOM_UPPER_LIMIT = 100;
     private static int part = 0;
-
-    private static final Random RANDOM = new Random();
-    private static int number = RANDOM.nextInt(RANDOM_UPPER_LIMIT);
 
     public static void runGameEven() {
         Cli.runGameGreet();
-        getRules();
-        printAnswer();
+        getRules(RULES);
+        movePart();
     }
 
     public static String getGameName() {
         return GAMEEVEN;
     }
 
-    public static void getRules() {
-        System.out.println(RULES + "\n"); }
+    public static void getRules(String pRULES) {
+        System.out.println(pRULES + "\n"); }
 
-    private static void printQuestion() {
-        System.out.println("Question: " + number); }
+    public static void printCongratulations() {
+        System.out.println("Congratulations, " + Cli.getName() + "!");
+    }
 
-    private static void printTrue() {
+    public static boolean checkPart(int pPart, int pMaxPart) {
+        return pPart == pMaxPart;
+    }
+
+    public static int generateNumber() {
+        Random random = new Random();
+        int num = random.nextInt(RANDOM_UPPER_LIMIT);
+        return num;
+    }
+
+    public static void printCorrect() {
         System.out.println("Correct!" + "\n");
+    }
+
+    private static void printQuestion(int pNumber) {
+        System.out.println("Question: " + pNumber); }
+
+    private static void printAnswer() {
+        System.out.print("Your answer: ");
     }
 
     private static void printFalse(String answer) {
@@ -43,40 +58,27 @@ public class Even extends Cli {
         }
     }
 
-    private static void printCongratulations() {
-        System.out.println("Congratulations, " + Cli.getName() + "!");
-    }
 
-    private static void resetParamTrue(RequestAnswer requestAnswer) {
-        part++;
-        number = RANDOM.nextInt(RANDOM_UPPER_LIMIT);
-        requestAnswer.resetAnswer();
-    }
-
-    private static void resetParamFalse(RequestAnswer requestAnswer) {
-        part = 0;
-        requestAnswer.resetAnswer();
-    }
-
-    private static void printAnswer() {
-        String answer;
+    private static void movePart() {
         RequestAnswer requestAnswer = new RequestAnswer();
 
-        for (int i = 0; i < MAX_PART; i++) {
-            printQuestion();
-            System.out.print("Your answer: ");
-            answer = RequestAnswer.requestInput();
+        for (int i = 0; i < App.getMaxQuestion(); i++) {
+            int number = generateNumber();
+            printQuestion(number);
+            printAnswer();
+            String answer = RequestAnswer.requestInput();
             if (checkAnswer(answer, number)) {
-                printTrue();
-                resetParamTrue(requestAnswer);
+                printCorrect();
+                part++;
+                RequestAnswer.resetAnswer();
             } else {
                 printFalse(answer);
-                i = -1;
-                resetParamFalse(requestAnswer);
+                part = 0;
+                RequestAnswer.resetAnswer();
                 break;
             }
         }
-        if (part == MAX_PART) {
+        if (checkPart(part, App.getMaxQuestion())) {
             printCongratulations();
         }
     }
