@@ -3,7 +3,7 @@ package hexlet.code.games;
  * This class for exit game.
  */
 
-public final class Exit {
+public class Exit {
     private static final String GAMEEXIT = "Exit";
 
     public static String getGameName() {
