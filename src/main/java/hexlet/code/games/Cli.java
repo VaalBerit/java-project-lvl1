@@ -6,6 +6,7 @@ public class Cli {
     private static final String GAMEGREET = "Greet";
     private static final String GREETINGPLAYER = "Welcome to the Brain Games!" + "\n" + "May I have your name? ";
     private static String playerName;
+
     public static void runGameGreet() {
         helloName(requestName());
     }
