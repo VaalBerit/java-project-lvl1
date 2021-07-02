@@ -6,11 +6,11 @@ import hexlet.code.games.Even;
 
 import java.util.ArrayList;
 
-public class GameList {
+public class GamesList {
     private static ArrayList<String> brainGamesName = new ArrayList<>();
 
     public static void initialiazationGameList() {
-        //brainGamesName.add(Exit.getGameName());
+        brainGamesName.add(Exit.getGameName());
         brainGamesName.add(Cli.getGameName());
         brainGamesName.add(Even.getGameName());
     }
