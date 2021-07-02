@@ -4,4 +4,6 @@
 [![Build Gradle](https://github.com/VaalBerit/java-project-lvl1/actions/workflows/main.yml/badge.svg)](https://github.com/VaalBerit/java-project-lvl1/actions/workflows/main.yml)
 [![Build Status](https://travis-ci.com/VaalBerit/java-project-lvl1.svg?branch=main)](https://travis-ci.com/github/VaalBerit/java-project-lvl1)
 ### Example of running the game Even:
-[![Game_Even](https://asciinema.org/a/KK4QHXeuzeqdBM9JoL2jDjMav.svg)](https://asciinema.org/a/KK4QHXeuzeqdBM9JoL2jDjMav)
+[![Game Even](https://asciinema.org/a/acLE4IhSRIaHBbXg3BDR4Gzcy.svg)](https://asciinema.org/a/acLE4IhSRIaHBbXg3BDR4Gzcy)
+### Example of running the game Calculator:
+[![Game Calculator](https://asciinema.org/a/HyMQDJ6anF0MDQORpaSgn3QtQ.svg)](https://asciinema.org/a/HyMQDJ6anF0MDQORpaSgn3QtQ)
