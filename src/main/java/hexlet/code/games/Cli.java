@@ -3,7 +3,7 @@ package hexlet.code.games;
 import java.util.Scanner;
 
 public class Cli {
-    private static final String GAMEGREET = "Greet";
+    private static final String GAMENAME = "Greet";
     private static final String GREETINGPLAYER = "Welcome to the Brain Games!" + "\n" + "May I have your name? ";
     private static String playerName;
 
@@ -16,7 +16,7 @@ public class Cli {
     }
 
     public static String getGameName() {
-        return GAMEGREET;
+        return GAMENAME;
     }
 
     public static void getGreeting() {

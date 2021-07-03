@@ -5,19 +5,18 @@ import hexlet.code.App;
 import hexlet.code.gamecontroller.RequestAnswer;
 
 public class Even extends Cli {
-    private static final String GAMEEVEN = "Even";
+    private static final String GAMENAME = "Even";
     private static final String RULES = "Answer \"yes\" if number even otherwise answer \"no\".";
     private static final int RANDOM_UPPER_LIMIT = 100;
-    private static int part = 0;
 
     public static void runGameEven() {
-        Cli.runGameGreet();
+        runGameGreet();
         getRules(RULES);
         movePart();
     }
 
     public static String getGameName() {
-        return GAMEEVEN;
+        return GAMENAME;
     }
 
     public static void getRules(String pRULES) {
@@ -27,8 +26,8 @@ public class Even extends Cli {
         System.out.println("Congratulations, " + Cli.getName() + "!");
     }
 
-    public static boolean checkPart(int pPart, int pMaxPart) {
-        return pPart == pMaxPart;
+    public static boolean checkPart(int pPart, int pMaxQuestion) {
+        return pPart == pMaxQuestion;
     }
 
     public static int generateNumber() {
@@ -58,27 +57,29 @@ public class Even extends Cli {
         }
     }
 
-
     private static void movePart() {
         RequestAnswer requestAnswer = new RequestAnswer();
-
+        int count = 0;
         for (int i = 0; i < App.getMaxQuestion(); i++) {
             int number = generateNumber();
+
             printQuestion(number);
             printAnswer();
+
             String answer = RequestAnswer.requestInput();
+
             if (checkAnswer(answer, number)) {
                 printCorrect();
-                part++;
+                count++;
                 RequestAnswer.resetAnswer();
             } else {
                 printFalse(answer);
-                part = 0;
+                count = 0;
                 RequestAnswer.resetAnswer();
                 break;
             }
         }
-        if (checkPart(part, App.getMaxQuestion())) {
+        if (checkPart(count, App.getMaxQuestion())) {
             printCongratulations();
         }
     }

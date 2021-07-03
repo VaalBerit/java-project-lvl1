@@ -4,7 +4,7 @@ import hexlet.code.games.Cli;
 import hexlet.code.games.Exit;
 import hexlet.code.games.Even;
 import hexlet.code.games.Calculator;
-
+import hexlet.code.games.GCD;
 import java.util.ArrayList;
 
 public class GamesList {
@@ -15,10 +15,12 @@ public class GamesList {
         brainGamesName.add(Cli.getGameName());
         brainGamesName.add(Even.getGameName());
         brainGamesName.add(Calculator.getGameName());
+        brainGamesName.add(GCD.getGameName());
     }
 
     public static ArrayList<String> getBrainGamesName() {
         return brainGamesName; }
+
     public static void setBrainGamesName(String pGameName) {
         brainGamesName.add(pGameName); }
 }

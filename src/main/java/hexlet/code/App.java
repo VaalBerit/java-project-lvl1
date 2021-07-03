@@ -19,6 +19,7 @@ public class App {
     Engine.gamesSelector(RequestNumber.requestInput());
 
   }
+
   public static int getMaxQuestion() {
     return MAX_QUESTION;
   }

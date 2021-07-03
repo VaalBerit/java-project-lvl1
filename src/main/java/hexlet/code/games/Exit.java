@@ -4,10 +4,10 @@ package hexlet.code.games;
  */
 
 public class Exit {
-    private static final String GAMEEXIT = "Exit";
+    private static final String GAMENAME = "Exit";
 
     public static String getGameName() {
-        return GAMEEXIT; }
+        return GAMENAME; }
 
     public static void exitGame() {
         System.out.println("Good luck!");
