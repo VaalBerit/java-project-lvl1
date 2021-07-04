@@ -6,6 +6,7 @@ import hexlet.code.gamecontroller.RequestNumber;
 public class GCD extends Calculator {
     private static final String GAMENAME = "GCD";
     private static final String RULES = "Find the greatest common divisor of given numbers.\n";
+    private static final int RANDOM_UPPER_LIMIT = 80;
 
     public static void runGameGCD() {
         runGameGreet();
@@ -33,8 +34,8 @@ public class GCD extends Calculator {
         int count = 0;
         for (int i = 0; i < App.getMaxQuestion(); i++) {
 
-            int number1 = generateNumber();
-            int number2 = generateNumber();
+            int number1 = generateNumber(RANDOM_UPPER_LIMIT);
+            int number2 = generateNumber(RANDOM_UPPER_LIMIT);
             int result = resultGCD(number1, number2);
 
             printQuestion(printExpression(number1, number2));
