@@ -40,14 +40,14 @@ public class Even extends Cli {
         System.out.println("Correct!" + "\n");
     }
 
-    private static void printQuestion(int pNumber) {
+    protected static void printQuestion(final int pNumber) {
         System.out.println("Question: " + pNumber); }
 
-    private static void printAnswer() {
+    protected static void printAnswer() {
         System.out.print("Your answer: ");
     }
 
-    private static void printFalse(String answer) {
+    protected static void printFalse(String answer) {
         if (answer.equals("yes")) {
             System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'." + "\n"
                     + "Let's try again, " + Cli.getName() + "!");
@@ -84,7 +84,7 @@ public class Even extends Cli {
         }
     }
 
-    private static boolean checkAnswer(String answer, int pNumber) {
+    protected static boolean checkAnswer(String answer, int pNumber) {
         if (answer.equals("yes") && pNumber % 2 == 0) {
             return true;
         } else {
