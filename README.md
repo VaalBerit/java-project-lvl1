@@ -11,3 +11,5 @@
 [![Game Greatest Common Divisor](https://asciinema.org/a/u7Nqq26GxUOVH1itY2AblDXdv.svg)](https://asciinema.org/a/u7Nqq26GxUOVH1itY2AblDXdv)
 ### Example of running the game Progression:
 [![Game Progression](https://asciinema.org/a/PB95aeA7KvcnmIhB0hYETpXsW.svg)](https://asciinema.org/a/PB95aeA7KvcnmIhB0hYETpXsW)
+### Example of running the game Prime:
+[![Game Prime](https://asciinema.org/a/p3qRSc7MBT6rLibUBSSoA8DmX.svg)](https://asciinema.org/a/p3qRSc7MBT6rLibUBSSoA8DmX)
