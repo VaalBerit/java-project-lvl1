@@ -30,9 +30,9 @@ public class Even extends Cli {
         return pPart == pMaxQuestion;
     }
 
-    public static int generateNumber() {
+    public static int generateNumber(int pUpperLimit) {
         Random random = new Random();
-        int num = random.nextInt(RANDOM_UPPER_LIMIT);
+        int num = random.nextInt(pUpperLimit);
         return num;
     }
 
@@ -61,7 +61,7 @@ public class Even extends Cli {
         RequestAnswer requestAnswer = new RequestAnswer();
         int count = 0;
         for (int i = 0; i < App.getMaxQuestion(); i++) {
-            int number = generateNumber();
+            int number = generateNumber(RANDOM_UPPER_LIMIT);
 
             printQuestion(number);
             printAnswer();
