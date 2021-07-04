@@ -9,3 +9,5 @@
 [![Game Calculator](https://asciinema.org/a/HyMQDJ6anF0MDQORpaSgn3QtQ.svg)](https://asciinema.org/a/HyMQDJ6anF0MDQORpaSgn3QtQ)
 ### Example of running the game Greatest Common Divisor:
 [![Game Greatest Common Divisor](https://asciinema.org/a/u7Nqq26GxUOVH1itY2AblDXdv.svg)](https://asciinema.org/a/u7Nqq26GxUOVH1itY2AblDXdv)
+### Example of running the game Progression:
+[![Game Progression](https://asciinema.org/a/PB95aeA7KvcnmIhB0hYETpXsW.svg)](https://asciinema.org/a/PB95aeA7KvcnmIhB0hYETpXsW)
