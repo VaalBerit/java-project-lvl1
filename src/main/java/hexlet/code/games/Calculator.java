@@ -8,6 +8,7 @@ public class Calculator extends Even {
     private static final String GAMENAME = "Calc";
     private static final String RULES = "What is the result of the expression?\n";
     private static final int MAX_ARITHM_OPERATIONS = 3;
+    private static final int RANDOM_UPPER_LIMIT = 100;
 
     public static String getGameName() {
         return GAMENAME; }
@@ -34,7 +35,7 @@ public class Calculator extends Even {
 
     public static void printResult(final boolean pCheckAnswer, final int pAnswer, final int pResultExpression) {
         if (pCheckAnswer) {
-            Even.printCorrect();
+            printCorrect();
         } else {
             System.out.println("\"" + pAnswer + "\"" + " is wrong answer ;(. Correct answer was "
                     + "\"" + pResultExpression + "\"" + ".\n"
@@ -79,8 +80,8 @@ public class Calculator extends Even {
     private static void movePart() {
         int count = 0;
         for (int i = 0; i < App.getMaxQuestion(); i++) {
-            int number1 = Even.generateNumber();
-            int number2 = Even.generateNumber();
+            int number1 = Even.generateNumber(RANDOM_UPPER_LIMIT);
+            int number2 = Even.generateNumber(RANDOM_UPPER_LIMIT);
             int arithmOperator = generateArithmOperaions();
             int resultExpression = resultExpression(number1, number2, arithmOperator);
 
@@ -92,7 +93,7 @@ public class Calculator extends Even {
                 printResult(checkAnswer(answer, resultExpression), answer, resultExpression);
                 count++;
                 if (checkPart(count, App.getMaxQuestion())) {
-                    Even.printCongratulations();
+                    printCongratulations();
                     break;
                 } else {
                     continue;
