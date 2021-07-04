@@ -1,10 +1,11 @@
 package hexlet.code.gamecontroller;
 
-import hexlet.code.games.Calculator;
-import hexlet.code.games.Cli;
 import hexlet.code.games.Exit;
+import hexlet.code.games.Cli;
 import hexlet.code.games.Even;
+import hexlet.code.games.Calculator;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
 import hexlet.code.view.GamesList;
 
 public class Engine extends  RequestNumber {
@@ -23,6 +24,9 @@ public class Engine extends  RequestNumber {
                     break;
                 case "4":
                     GCD.runGameGCD();
+                    break;
+                case "5":
+                    Progression.runGameProgression();
                     break;
                 case "0": Exit.exitGame();
                 default: break;
