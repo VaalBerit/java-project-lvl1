@@ -25,9 +25,9 @@ public class Calculator extends Even {
     public static void printQuestion(final String pExpression) {
         System.out.println("Question: " + pExpression); }
 
-    public static void printAnswer() {
+    /*public static void printAnswer() {
         System.out.print("Your answer: ");
-    }
+    }*/
 
     public static boolean checkAnswer(final int pAnswer, final int pResult) {
         return pAnswer == pResult;

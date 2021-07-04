@@ -6,6 +6,7 @@ import hexlet.code.games.Even;
 import hexlet.code.games.Calculator;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 import java.util.ArrayList;
 
 public class GamesList {
@@ -18,6 +19,7 @@ public class GamesList {
         brainGamesName.add(Calculator.getGameName());
         brainGamesName.add(GCD.getGameName());
         brainGamesName.add(Progression.getGameName());
+        brainGamesName.add(Prime.getGameName());
     }
 
     public static ArrayList<String> getBrainGamesName() {
